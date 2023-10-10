@@ -8,7 +8,7 @@
         const albumImages = {
             album1: ['assets/images/A1-1.jpg', 'assets/images/A1-2.jpg', 'assets/images/A1-3.jpg','assets/images/A1-4.jpg','assets/images/A1-5.jpg','assets/images/A1-6.jpg'],
             album2: ['assets/images/A2-1.jpg', 'assets/images/A2-2.jpg', 'assets/images/A2-3.jpg'],
-            album3: ['assets/images/A3-3.jpg', 'assets/images/A3-3.2pg', 'assets/images/A3-1.jpg','assets/images/A3-4.jpg'],
+            album3: ['assets/images/A3-3.jpg',  'assets/images/A3-1.jpg','assets/images/A3-4.jpg'],
         };
 
         // Function to display an image in an enlarged view
