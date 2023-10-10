@@ -1,0 +1,185 @@
+label {
+    font-weight: bold;
+}
+
+#album-select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.album-header {
+    margin-bottom: 20px;
+}
+
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+} */
+
+.album-selector {
+    text-align: center;
+    margin: 20px;
+}
+
+select {
+    padding: 10px;
+}
+
+#image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+#image-gallery img {
+    width: 300px;
+    height: auto;
+}
+
+.album-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    margin: 10px;
+}
+
+.album-image.show {
+    opacity: 1;
+}
+
+
+#enlargedContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#enlargedImage {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+
+.uploadOuter {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding: 20px;
+}
+
+/* @media (max-width: 768px){
+    .col-md-3 {
+min-width: 60% !important;
+}
+} */
+
+.dragBox {
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    line-height: 95px;
+    color: #999;
+    border: 2px dashed #ccc;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+input[type="file"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.select-padd {
+    padding: 0.5em;
+    width: 80%;
+}
+
+
+.draging {
+    transform: scale(1.1);
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width:767px) {
+
+    .upload-content {
+        text-align: center;
+    }
+
+    /* .select-padd {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    .select-padd option{
+        width: 300px;
+        max-width: 60% !important;
+    } */
+}
+
+.btn-sub {
+    display: inline-block;
+    background-color: #ee626b;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+@media(min-width:767px) {
+    .upload-br {
+        display: none;
+    }
+}
+
+.album-select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+#preview{
+    margin-top: 4em;
+}
+
+#preview img, #preview video{
+    max-height: 320px;
+}
+
+.close {
+    font-size: 45px;
+    font-weight: 600;
+  }
+
+
+.upload-banner{
+    background-image: url(../images/A1-6.jpg);
+    border-radius: 0px 0px 150px 150px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+}

@@ -1,3 +1,28 @@
+<script>
+
+  var fileType = "";
+  function dragNdrop(event) {
+      var fileName = URL.createObjectURL(event.target.files[0]);
+      var preview = document.getElementById("preview");
+      var previewImg = document.createElement(fileType);
+      previewImg.setAttribute("src", fileName);
+      preview.innerHTML = "";
+      preview.appendChild(previewImg);
+  }
+  function drag() {
+      document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
+  }
+  function drop() {
+      document.getElementById('uploadFile').parentNode.className = 'dragBox';
+  }
+
+
+  function albumSelection() {
+  var x = document.getElementById("album-type").value;
+  fileType = x;
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +42,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/upload.css">
+
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -49,18 +76,18 @@ https://templatemo.com/tm-589-lugx-gaming
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="https://urldefense.com/v3/__http://index.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5H3dOuwto$" class="logo">
                         <img src="assets/images/hyundai-logo.png" alt="" style="width: 80px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="upload.html" class="active">Upload</a></li>
-                      <li><a href="review.html" >Review</a></li>
-                      <li><a href="index.html">Albums</a></li>
-                      <li><a href="index.html">Security</a></li>
-                      <li><a href="index.html">Log Out</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://index.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5H3dOuwto$">Home</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://upload.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5HTH-7W6Y$" class="active">Upload</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://review.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5HcYRXoF8$">Review</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://index.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5H3dOuwto$">Albums</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://index.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5H3dOuwto$">Security</a></li>
+                      <li><a href="https://urldefense.com/v3/__http://index.html__;!!KGsUVTaOOUOdLS4M!LEJQFPcDsBfj3MFdhCYk1UUsiWq4292gilZjJ2xWG9rCxjfcHk54gICh3MRAD34QF7SDp3i_Y4nVxXtNKSU8y782CP5H3dOuwto$">Log Out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -73,80 +100,85 @@ https://templatemo.com/tm-589-lugx-gaming
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="page-heading header-text">
+  <div class="page-heading header-text upload-banner">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h3>Modern Warfare® II</h3>
-          <span class="breadcrumb"><a href="#">Home</a>  >  <a href="#">Shop</a>  >  Assasin Creed</span>
+          <h3>Create Album</h3>
+          <!-- <span class="breadcrumb"><a href="#">Home</a>  >  <a href="#">Shop</a>  >  Assasin Creed</span> -->
         </div>
       </div>
     </div>
   </div>
 
-  <div class="single-product section">
+  <div class="section">
     <div class="container">
       <div class="row">
+        <div class="col-lg-3 upload-content">
+
+            <p style="padding-top: 2em;">Album</p>
+
+            <select class="select-padd album-select">
+                <option value="">Select</option>
+                <option value="TCI - Vintage Car">TCI - Vintage Car</option>
+                <option value="TCI - Welcome Dinner">TCI - Welcome Dinner</option>
+                <option value="Spirit">Spirit</option>
+                <option value="Toyota Minitreking">Toyota Minitreking</option>
+                <option value="Subaru Team India Visit">Subaru Team India Visit</option>
+
+            </select>
+        </div>
+        <div class="col-lg-3 upload-content">
+          <p style="padding-top: 2em;">Type of file</p>
+            <select name="" id="album-type" class="select-padd album-select" onchange="albumSelection()">
+                <option value="">Select</option>
+                <option value="img">Image</option>
+                <option value="video">Video</option>
+                <option value="img">Gif</option>
+            </select>
+        </div>
+        <div class="col-lg-6"></div>
+
+        <!-- <div class="col-lg-6"></div> -->
+  
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 upload-content">
+
+          <div class="uploadOuter">
+            <label for="uploadFile" class="btn btn-primary">Upload File</label>
+            <br class="upload-br">
+            <strong>OR</strong>
+            <br class="upload-br">
+            <span class="dragBox">
+                Darg and Drop file here
+                <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="uploadFile" />
+            </span>
+        </div>
+        <button type="button" class="btn btn-success btn-sub" style="margin-left:20px">Submit</button>
+        
+        </div>
+
         <div class="col-lg-6">
-          <div class="left-image">
-            <img src="assets/images/single-game.jpg" alt="">
+          
+          <div id="preview">
+            
           </div>
         </div>
-        <div class="col-lg-6 align-self-center">
-          <h4>Call of Duty®: Modern Warfare® II</h4>
-          <span class="price"><em>$28</em> $22</span>
-          <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p>
-          <form id="qty" action="#">
-            <input type="qty" class="form-control" id="1" aria-describedby="quantity" placeholder="1">
-            <button type="submit"><i class="fa fa-shopping-bag"></i> ADD TO CART</button>
-          </form>
-          <ul>
-            <li><span>Game ID:</span> COD MMII</li>
-            <li><span>Genre:</span> <a href="#">Action</a>, <a href="#">Team</a>, <a href="#">Single</a></li>
-            <li><span>Multi-tags:</span> <a href="#">War</a>, <a href="#">Battle</a>, <a href="#">Royal</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-12">
-          <div class="sep"></div>
-        </div>
+
+          
+
+        <!-- <div class="col-lg-6"></div> -->
+  
       </div>
     </div>
   </div>
 
-  <div class="more-info">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="tabs-content">
-            <div class="row">
-              <div class="nav-wrapper ">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (3)</button>
-                  </li>
-                </ul>
-              </div>              
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                  <p>You can search for more templates on Google Search using keywords such as "templatemo digital marketing", "templatemo one-page", "templatemo gallery", etc. Please tell your friends about our website. If you need a variety of HTML templates, you may visit Tooplate and Too CSS websites.</p>
-                  <br>
-                  <p>Coloring book air plant shabby chic, crucifix normcore raclette cred swag artisan activated charcoal. PBR&B fanny pack pok pok gentrify truffaut kitsch helvetica jean shorts edison bulb poutine next level humblebrag la croix adaptogen. Hashtag poke literally locavore, beard marfa kogi bruh artisan succulents seitan tonx waistcoat chambray taxidermy. Same cred meggings 3 wolf moon lomo irony cray hell of bitters asymmetrical gluten-free art party raw denim chillwave tousled try-hard succulents street art.</p>
-                </div>
-                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                  <p>Coloring book air plant shabby chic, crucifix normcore raclette cred swag artisan activated charcoal. PBR&B fanny pack pok pok gentrify truffaut kitsch helvetica jean shorts edison bulb poutine next level humblebrag la croix adaptogen. <br><br>Hashtag poke literally locavore, beard marfa kogi bruh artisan succulents seitan tonx waistcoat chambray taxidermy. Same cred meggings 3 wolf moon lomo irony cray hell of bitters asymmetrical gluten-free art party raw denim chillwave tousled try-hard succulents street art.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="section categories related-games">
+
+  <!-- <div class="section categories related-games">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -202,7 +234,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   
 
